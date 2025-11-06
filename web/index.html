@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MidNight AI</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23060E25'/><path d='M20 44c6 2 18-2 24-12 2-4 3-9 2-14-6 2-18 6-26 18-3 4-2 8 0 8z' fill='%237676FF'/><circle cx='42' cy='20' r='4' fill='%23FFFFFF'/></svg>" />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="top-bar">
+        <div class="brand">
+          <span class="brand-icon" aria-hidden="true">◎</span>
+        </div>
+        <div class="controls">
+          <button class="ghost" type="button" aria-label="Toggle theme">⚙</button>
+          <button class="ghost" type="button">Sign in</button>
+          <button class="primary" type="button">Sign up</button>
+        </div>
+      </header>
+
+      <main class="hero">
+        <div class="logo-stack">
+          <span class="mark" aria-hidden="true">◎</span>
+          <span class="wordmark">MidNight AI</span>
+        </div>
+
+        <form class="search-shell" id="composer" autocomplete="off">
+          <div class="search-bar">
+            <button class="icon" type="button" aria-label="Attach context">📎</button>
+            <input
+              id="prompt"
+              name="prompt"
+              type="text"
+              placeholder="What do you want to explore tonight?"
+              maxlength="2000"
+              required
+            />
+            <div class="search-actions">
+              <button class="mode" type="button" id="mode-toggle">Auto ▾</button>
+              <button class="submit" id="send" type="submit" aria-label="Send message">➤</button>
+            </div>
+          </div>
+        </form>
+
+        <div class="quick-links" role="list">
+          <button class="chip" data-prompt="Give me trending tech news in two sentences.">NightPulse</button>
+          <button class="chip" data-prompt="Brainstorm three product taglines about sustainable energy.">Spark Ideas</button>
+          <button class="chip" data-prompt="Summarize the latest market outlook for electric vehicles.">Market Flash</button>
+          <button class="chip" data-prompt="Draft a friendly reply confirming a meeting tomorrow at 10am.">Quick Reply</button>
+        </div>
+
+        <p class="terms">By chatting with MidNight AI you agree to the Terms and Privacy Policy.</p>
+
+        <section class="results" id="results" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>
